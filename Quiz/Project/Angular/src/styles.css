@@ -5,6 +5,7 @@ input.ng-invalid.ng-dirty{
 
 button.btn-submit{
     width: 100%;
+    background-color: #e91e63;
 }
 
 ul.answer li:hover{
@@ -17,3 +18,4 @@ ul li.selected{
     background-color: #26a69a !important;
     color: #eafaf9 !important;
 }
+
