@@ -27,13 +27,13 @@
         <div class="card white">
             <div class="card-content center">
                 <span class="card-title tk-flegrei">{{i+1}}</span>
-                <p>{{qn.Qn}}</p>
+                <p><br>{{qn.Qn}}</p>
                 <div *ngIf="qn.ImageName!=null">
                     <img class="center" [src]="quizService.rootUrl+'/Images/'+qn.ImageName" style="width:350px;height:200px">
                 </div>
             </div>
 
-            <div class="card-action">
+            <div class="card-action black">
                 <div class="collection">
                     <ng-container *ngFor="let option of qn.Options;let j = index">
                         <p *ngIf="option != null" class="collection-item">
@@ -47,6 +47,8 @@
                           </p>
                     </ng-container>
                   </div>
+                  <br>
+                  <br>
             </div>
         </div>
     </ng-container>

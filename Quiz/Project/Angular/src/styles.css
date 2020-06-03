@@ -17,6 +17,11 @@ ul.answer li:hover{
     height: 50px;
 }
 
+.btn {
+    background-color:black;
+    font-family: flegrei;
+}
+
 ul li.selected{
     background-color: #000000 !important;
     color: #eafaf9 !important;
@@ -47,3 +52,6 @@ ul li.selected{
     box-shadow: #636363;
 }
 
+.card-action {
+    border-radius: 40px;
+}
