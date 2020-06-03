@@ -12,7 +12,7 @@ export class QuizComponent implements OnInit {
   constructor(private router: Router, public quizService: QuizService) { }
 
   ngOnInit() {
-    if (parseInt(localStorage.getItem('seconds')) > 0) {
+    if (parseInt(localStorage.getItem('seconds')) > 0) { //if it wad already started, get values from localstorage
       this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
       this.quizService.qnProgress = parseInt(localStorage.getItem('qnProgress'));
       this.quizService.qns = JSON.parse(localStorage.getItem('qns'));
@@ -22,11 +22,11 @@ export class QuizComponent implements OnInit {
         this.startTimer();
     }
     else {
-      this.quizService.seconds = 0;
-      this.quizService.qnProgress = 0;
+      this.quizService.seconds = 0; //initial value
+      this.quizService.qnProgress = 0; //initial value
       this.quizService.getQuestions().subscribe(
         (data: any) => {
-          this.quizService.qns = data;
+          this.quizService.qns = data; //qns stores questions 
           this.startTimer();
         }
       );
@@ -35,7 +35,7 @@ export class QuizComponent implements OnInit {
 
   startTimer() {
     this.quizService.timer = setInterval(() => {
-      this.quizService.seconds++;
+      this.quizService.seconds++; //counts secs
       localStorage.setItem('seconds', this.quizService.seconds.toString());
     }, 1000);
   }

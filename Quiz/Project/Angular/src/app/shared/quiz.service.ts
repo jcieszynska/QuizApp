@@ -7,16 +7,17 @@ import { HttpClient } from '@angular/common/http';
 export class QuizService {
 
   //properties
-  readonly rootUrl = 'https://localhost:44359';
-  qns: any[];
-  seconds: number;
-  timer;
-  qnProgress: number;
-  correctAnswerCount: number = 0;
+  readonly rootUrl = 'https://localhost:44359'; //our api
+  qns: any[]; //stores 10 rand questions
+  seconds: number; //stores time taken
+  timer; //counting time taken
+  qnProgress: number; //saves nr of qs attended by participant
+  correctAnswerCount: number = 0; //default nr of correct answers
 
-  
+  //
   constructor(private http: HttpClient) { }
 
+  //display time
   displayTimeElapsed() {
     return Math.floor(this.seconds / 3600) + ':' + Math.floor(this.seconds / 60) + ':' + Math.floor(this.seconds % 60);
   }
@@ -35,7 +36,7 @@ export class QuizService {
       Name: name,
       Email: email
     }
-    return this.http.post(this.rootUrl + '/api/InsertParticipant', body);
+    return this.http.post(this.rootUrl + '/api/InsertParticipant', body); //post method
   }
 
   //getting questions
@@ -44,11 +45,13 @@ export class QuizService {
     return this.http.get(this.rootUrl + '/api/Questions');
   }
 
+  //getting answers
   getAnswers() {
     var body = this.qns.map(x => x.QnID);
     return this.http.post(this.rootUrl + '/api/Answers', body);
   }
 
+  //send score&time to api
   submitScore() {
     var body = JSON.parse(localStorage.getItem('participant'));
     body.Score = this.correctAnswerCount;

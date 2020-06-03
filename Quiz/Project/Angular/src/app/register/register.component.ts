@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   constructor(public quizService : QuizService, private route : Router) { }
 
-  ngOnInit()/*: void*/ {
+  ngOnInit() {
   }
 
   OnSubmit(name:string,email:string) {
