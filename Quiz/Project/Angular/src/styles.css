@@ -5,15 +5,37 @@ input.ng-invalid.ng-dirty{
 
 button.btn-submit{
     width: 100%;
+    background-color: #000000;
+    color: #eafaf9;
 }
 
 ul.answer li:hover{
-    background-color: #26a69a;
+    background-color: #000000;
     color: #eafaf9;
     cursor: pointer;
 }
 
 ul li.selected{
-    background-color: #26a69a !important;
+    background-color: #000000 !important;
     color: #eafaf9 !important;
 }
+    @font-face {
+    font-family:"hobo-std";
+    src:url("https://use.typekit.net/af/10fd15/0000000000000000000131c3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/10fd15/0000000000000000000131c3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/10fd15/0000000000000000000131c3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;
+    }
+    
+    @font-face {
+    font-family:"flegrei";
+    src:url("https://use.typekit.net/af/74a5d1/00000000000000003b9b3d6e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/74a5d1/00000000000000003b9b3d6e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/74a5d1/00000000000000003b9b3d6e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;
+    }
+    .tk-hobo-std { font-family: "hobo-std",sans-serif; }
+    .tk-flegrei { font-family: "flegrei",sans-serif; }
+    
+ body{
+     background-color: black;;
+ }
+
+ 
+

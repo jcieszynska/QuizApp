@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../shared/quiz.service';
 import { Router } from '@angular/router';
+//import { Modal } from '@angular/materialize-css';
 
 @Component({
   selector: 'app-result',
@@ -36,7 +37,7 @@ export class ResultComponent implements OnInit {
 
   OnSubmit() {
     this.quizService.submitScore().subscribe(() => {
-      this.restart();
+      window.alert('Your score and time have been successfully submitted');
 
     });
   }

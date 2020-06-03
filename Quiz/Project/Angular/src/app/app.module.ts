@@ -24,8 +24,8 @@ import { AuthGuard } from './auth/auth.guard';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, //<-- def
-    RouterModule.forRoot(appRoutes), //const from routes.ts
+    AppRoutingModule, //<-- default
+    RouterModule.forRoot(appRoutes),
     FormsModule,
     HttpClientModule
   ],

@@ -10,7 +10,6 @@ namespace WebAPI.Controllers
 {
     public class ParticipantController : ApiController
     {
-        //method updating user
         [HttpPost]
         [Route("api/InsertParticipant")]
 
@@ -23,7 +22,6 @@ namespace WebAPI.Controllers
             }
         }
 
-        //score&time
         [HttpPost]
         [Route("api/UpdateOutput")]
         public void UpdateOutput(Participant model) {
