@@ -4,10 +4,10 @@
     <h2 class="header">Completed!</h2>
     <div class="card horizontal">
       <div class="card-image">
-        <img src="../../assets/img/trophy.jpg" style="width: 250px;height : 250px;">
+        <img src="../../assets/img/finish.png" style="width: 250px;height : 250px;">
       </div>
       <div class="card-stacked">
-        <div class="card-content">
+        <div class="card-content tk-flegrei">
           <h4>{{quizService.getParticipantName()}}</h4>
           <h3>{{quizService.correctAnswerCount}}/10</h3>
           <span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span>
@@ -24,9 +24,9 @@
     <!-- Qn with correct answer -->
     <h3>Questions with correct answer</h3>
     <ng-container *ngFor="let qn of quizService.qns;let i=index">
-        <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-                <span class="card-title">{{i+1}}</span>
+        <div class="card white">
+            <div class="card-content center">
+                <span class="card-title tk-flegrei">{{i+1}}</span>
                 <p>{{qn.Qn}}</p>
                 <div *ngIf="qn.ImageName!=null">
                     <img class="center" [src]="quizService.rootUrl+'/Images/'+qn.ImageName" style="width:350px;height:200px">
@@ -34,17 +34,19 @@
             </div>
 
             <div class="card-action">
-                <ul class="collection">
+                <div class="collection">
                     <ng-container *ngFor="let option of qn.Options;let j = index">
-                        <li *ngIf="option != null" class="collection-item">
+                        <p *ngIf="option != null" class="collection-item">
+                          <label>
                             {{option}}
                             <span class="badge" *ngIf="qn.correct==j">
                                 <i class="material-icons green-text">check_circle</i>
                             </span>
-                            <span class="badge red-text" *ngIf="qn.answer==j && qn.correct!=j">Incorrect</span>
-                        </li>
+                            <span class="badge red-text" *ngIf="qn.answer==j && qn.correct!=j"><i class="material-icons red-text">highlight_off</i></span>
+                          </label>
+                          </p>
                     </ng-container>
-                </ul>
+                  </div>
             </div>
         </div>
     </ng-container>
