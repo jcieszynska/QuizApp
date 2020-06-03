@@ -10,6 +10,7 @@ namespace WebAPI.Controllers
 {
     public class QuizController : ApiController
     {
+        //getting 10 random questions from our database
         [HttpGet]
         [Route("api/Questions")]
 
@@ -28,7 +29,7 @@ namespace WebAPI.Controllers
                         QnID = x.QnID,
                         Qn = x.Qn,
                         ImageName = x.ImageName,
-                        Options = new string[] { x.Option1, x.Option2, x.Option3, x.Option4 }
+                        Options = new string[] { x.Option1, x.Option2, x.Option3, x.Option4 } //saved in array
                     }).ToList();
                 return this.Request.CreateResponse(HttpStatusCode.OK, updated);
 
@@ -45,10 +46,10 @@ namespace WebAPI.Controllers
                 var result = db.Questions
                     .AsEnumerable()
                     .Where(y => qIDs.Contains(y.QnID))
-                    .OrderBy(x => { return Array.IndexOf(qIDs, x.QnID); }) //to maintain question order
+                    .OrderBy(x => { return Array.IndexOf(qIDs, x.QnID); }) //to maintain question order, 1st elem
                     .Select(z => z.Answer)
                     .ToArray();
-                return this.Request.CreateResponse(HttpStatusCode.OK, result);
+                return this.Request.CreateResponse(HttpStatusCode.OK, result); //int array of answers
 
             }
 
