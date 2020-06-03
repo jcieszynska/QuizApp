@@ -13,11 +13,15 @@ ul.answer li:hover{
     background-color: #000000;
     color: #eafaf9;
     cursor: pointer;
+    border-radius: 40px;
+    height: 50px;
 }
 
 ul li.selected{
     background-color: #000000 !important;
     color: #eafaf9 !important;
+    border-radius: 40px;
+    height: 50px;
 }
     @font-face {
     font-family:"hobo-std";
@@ -37,5 +41,9 @@ ul li.selected{
      background-color: black;;
  }
 
- 
+.input .ng-pristine{
+    background-color: #636363;
+    border-bottom: #636363;
+    box-shadow: #636363;
+}
 

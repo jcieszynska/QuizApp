@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="row" *ngIf="quizService.qns && this.quizService.qnProgress != 10">
   <div class="col s8 offset-s2">
-    <span>Time Elapsed : {{quizService.displayTimeElapsed()}}</span>
+    <span class="white-text">Time Elapsed : {{quizService.displayTimeElapsed()}}</span>
     <div class="progress">
       <div class="determinate black"  [style.width.%]="(quizService.qnProgress+1)*10"></div>
     </div>
@@ -14,25 +14,25 @@
           <img  [src]="quizService.rootUrl+'/Images/'+quizService.qns[quizService.qnProgress].ImageName" style="width:350px;height:200px">
         </div>
       </div>
-<!-- 
-      <div class="card-action ">
-        <ul class="collection answer">
+
+      <div class="card-action center">
+        <ul class="answer">
           <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index">
             <li *ngIf="option != null" class="collection-item" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)">
-              {{option}} 
+              <br class="z-depth-5"> {{option}} 
             </li>
           </ng-container>
         </ul>
-      </div> -->
+      </div>
       
-      <form class="card-action answer">
+      <!-- <form class="card-action answer">
         <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index">
         <label *ngIf="option != null" class="collection-item" >
           <input name="group1" type="radio" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)"/>
           <span>{{option}}</span><br>
         </label>
       </ng-container>
-    </form>
+    </form> -->
 
     </div>
   </div>
