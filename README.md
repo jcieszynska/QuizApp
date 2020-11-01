@@ -7,21 +7,21 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
+* [Code Examples](#code-examples)
 * [Status](#status)
-* [Inspiration](#inspiration)
 * [Contact](#contact)
 
 ## General info
 Inspired by the COVID-19 pandemic and online classes, we decided to create a quiz application, which allows teachers to test their students.
 
 ## Screenshots
-![Register](./sceenshots/quizregi.PNG)
-![Register](./sceenshots/pytanko.PNG)
-![Register](./sceenshots/highlight.PNG)
-![Register](./sceenshots/result.PNG)
-![Register](./sceenshots/qa.PNG)
-![Register](./sceenshots/a7.PNG)
-![Register](./sceenshots/a8.PNG)
+![Register](./screenshots/quizregi.PNG)
+![Register](./screenshots/pytanko.PNG)
+![Register](./screenshots/highlight.PNG)
+![Register](./screenshots/result.PNG)
+![Register](./screenshots/qa.PNG)
+![Register](./screenshots/a7.PNG)
+![Register](./screenshots/a8.PNG)
 
 ## Technologies
 * Angular - version 9.1.7
