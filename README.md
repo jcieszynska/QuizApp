@@ -16,12 +16,12 @@ Inspired by the COVID-19 pandemic and online classes, we decided to create a qui
 
 ## Screenshots
 ![Register](./screenshots/quizregi.PNG)
-![Register](./screenshots/pytanko.PNG)
-![Register](./screenshots/highlight.PNG)
-![Register](./screenshots/result.PNG)
-![Register](./screenshots/qa.PNG)
-![Register](./screenshots/a7.PNG)
-![Register](./screenshots/a8.PNG)
+![Question](./screenshots/pytanko.PNG)
+![Question with a picture](./screenshots/qa.png)
+![Highlight](./screenshots/highlight.png)
+![Result](./screenshots/result.PNG)
+![Q&A](./screenshots/a7.PNG)
+![Q&A](./screenshots/a8.PNG)
 
 ## Technologies
 * Angular - version 9.1.7
