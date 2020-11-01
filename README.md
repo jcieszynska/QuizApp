@@ -49,4 +49,4 @@ To-do list:
 Project is: _no longer continued_. 
 
 ## Contact
-Created by [@jcieszynska](https://www.github.com/jcieszynska) and [@katkow](https://www.github.com/katkow) - feel free to contact me!
+Created by [@jcieszynska](https://www.github.com/jcieszynska) and [@katkow](https://www.github.com/katkow) - feel free to contact us!
